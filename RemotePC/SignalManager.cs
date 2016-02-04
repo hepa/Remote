@@ -10,13 +10,14 @@ namespace RemotePC
         private static RemoteButton _lastButton;
 
         private static RemoteButton ParseSignal(string signal)
-        {
-            RemoteButton button;
-            signal = signal.Trim();
-            if (Enum.TryParse<RemoteButton>(signal, out button))
+        {            
+            int intSignal;
+            var parsed = int.TryParse(signal, out intSignal);
+
+            if (parsed && Enum.IsDefined(typeof (RemoteButton), intSignal))
             {
-                return button;
-            }
+                return (RemoteButton)Enum.Parse(typeof (RemoteButton), signal);
+            }                       
 
             return RemoteButton.Undefined;
         }

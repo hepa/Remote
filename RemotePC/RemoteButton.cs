@@ -34,6 +34,7 @@ namespace RemotePC
 
         Two = 33464415,
 
+        [FollowUp]
         Three = 33448095,
 
         Four = 33476655,
@@ -42,12 +43,25 @@ namespace RemotePC
 
         Six = 33444015,
 
+        [FollowUp]
         Seven = 33484815,
 
         Eight = 33468495,
 
         Nine = 33452175,
 
-        Zoom = 33474615
+        Zoom = 33474615,
+
+        [FollowUp]
+        Left = 33437895,
+
+        [FollowUp]
+        Right = 33423615,
+
+        [FollowUp]
+        Up = 33427695,
+
+        [FollowUp]
+        Down = 33425655
     }
 }
